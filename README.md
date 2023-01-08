@@ -11,8 +11,8 @@ It demonstrates a few things:
 2. Create Multisig contract in [Vyper](https://vyper.readthedocs.io/en/stable/) using [Supersig](https://github.com/dmfxyz/supersig)
 3. Create NFT contract in Solidity using [OpenZeppelin libraries](https://github.com/OpenZeppelin/openzeppelin-contracts/)
 4. Use Brownie to:
-   5. Deploy above contracts 
-   6. Test above contracts
+   - Deploy above contracts 
+   - Test above contracts
 
 If you aren't too keen on experimenting and would rather try out **Scroll** 
 in [Hardhat](https://hardhat.org/) and [Solidity](https://docs.soliditylang.org/en/v0.8.17/), checkout the official guide [here](https://guide.scroll.io/user-guide/contract-deployment-tutorial).
