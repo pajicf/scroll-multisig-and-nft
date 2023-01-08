@@ -1,13 +1,17 @@
 import pytest
 
-@pytest.fixture(scope="session")
+@pytest.fixture()
 def deployer(accounts):
-    return accounts[0]  # NOTE: Also Owner 1
+    return accounts[0]
 
-@pytest.fixture(scope="session")
+@pytest.fixture()
 def not_owner(accounts):
     return accounts[4]
 
 @pytest.fixture()
+def receiver(accounts):
+    return accounts[5]
+
+@pytest.fixture()
 def nft(deployer, TheNFT):
-    return deployer.deploy(TheNFT)
+    return TheNFT.deploy({"from": deployer})
