@@ -29,28 +29,28 @@ def test_multisig_minting(nft, multisig, receiver, deployer, multisig_owners):
 
     multisig_tx = build_nft_mint_multisig_tx(receiver, nft)
 
-    proposalId = 0
+    proposal_id = 0
     # propose tx
-    multisig.propose(proposalId, multisig_tx["proposal_hash"], {"from": deployer})
+    multisig.propose(proposal_id, multisig_tx["proposal_hash"], {"from": deployer})
 
     # should revert until approved
     with brownie.reverts():
         multisig.execute(
-            proposalId,
+            proposal_id,
             multisig_tx["target"],
             multisig_tx["calldata"],
             multisig_tx["value"],
         )
 
     # let's approve it
-    multisig.approve(proposalId, {"from": multisig_owners[0]})
-    multisig.approve(proposalId, {"from": multisig_owners[1]})
+    multisig.approve(proposal_id, {"from": multisig_owners[0]})
+    multisig.approve(proposal_id, {"from": multisig_owners[1]})
 
     print(multisig_tx)
 
     # and now mint it
     multisig.execute(
-        proposalId,
+        proposal_id,
         multisig_tx["target"],
         multisig_tx["calldata"],
         multisig_tx["value"],
