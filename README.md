@@ -21,8 +21,8 @@ in [Hardhat](https://hardhat.org/) and [Solidity](https://docs.soliditylang.org/
 
 The contracts are deployed on [Scroll's](https://scroll.io/) Pre-Alpha testnet you can read more about [here](https://prealpha.scroll.io/).
 
-**TheNFT.sol:** [0x79A485E22d85757c4fa545FfF5DdFE5999E93210](https://l2scan.scroll.io/address/0x79A485E22d85757c4fa545FfF5DdFE5999E93210)  
-**Supersig.vy:** [0x9c0fc47d9346e2BE1E24F6cef76149779fE52715](https://l2scan.scroll.io/address/0x9c0fc47d9346e2BE1E24F6cef76149779fE52715)
+**TheNFT.sol:** [0xF7e514622AF27662fBd940b7061a2daD977ba478](https://l2scan.scroll.io/address/0xF7e514622AF27662fBd940b7061a2daD977ba478)  
+**Supersig.vy:** [0x79A485E22d85757c4fa545FfF5DdFE5999E93210](https://l2scan.scroll.io/address/0x79A485E22d85757c4fa545FfF5DdFE5999E93210)
 
 ## What do I need to have before I start?
 To run the project, you need:
