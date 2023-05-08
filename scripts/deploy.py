@@ -16,5 +16,5 @@ def main():
     deployer = accounts.load(click.prompt("Account", type=click.Choice(accounts.load())))
     print(f"You are using: 'deployer' [{deployer.address}]")
 
-    deployNFTContract(deployer)
+#     deployNFTContract(deployer)
     deployMultisigContract(deployer)

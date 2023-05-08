@@ -1,8 +1,8 @@
-<img src="./assets/banner.jpeg" alt="Scroll Pre-Alpha NFT and Multisig Demo"/>
+<img src="./assets/banner.jpeg" alt="Scroll Alpha NFT and Multisig Demo"/>
 
 # Scroll NFT and Multisig deployment Demo
 
-**This project is part of the more detailed blog post you can find [here](https://pajicf.netlify.app/blog/scroll-layer2-nft-and-multisig-deployment)**  
+**This project is part of the more detailed blog post you can find [here](https://0xpajic.com/blog/scroll-layer2-nft-and-multisig-deployment/)**  
 
 ## What's the repo about?
 
@@ -19,10 +19,10 @@ in [Hardhat](https://hardhat.org/) and [Solidity](https://docs.soliditylang.org/
 
 ## Where are the final contracts deployed?
 
-The contracts are deployed on [Scroll's](https://scroll.io/) Pre-Alpha testnet you can read more about [here](https://prealpha.scroll.io/).
+The contracts are deployed on [Scroll's](https://scroll.io/) Alpha testnet you can read more about [here](https://scroll.io/alpha).
 
-**TheNFT.sol:** [0xF7e514622AF27662fBd940b7061a2daD977ba478](https://l2scan.scroll.io/address/0xF7e514622AF27662fBd940b7061a2daD977ba478)  
-**Supersig.vy:** [0x79A485E22d85757c4fa545FfF5DdFE5999E93210](https://l2scan.scroll.io/address/0x79A485E22d85757c4fa545FfF5DdFE5999E93210)
+**TheNFT.sol:** [0x2b755B2D78156215Ac9dA3b2E09eB674B1493C92](https://blockscout.scroll.io/address/0x2b755B2D78156215Ac9dA3b2E09eB674B1493C92)  
+**Supersig.vy:** [0x6fD91afc1C7dCB72387da9a4A6B3108C6538CF85](https://blockscout.scroll.io/address/0x6fD91afc1C7dCB72387da9a4A6B3108C6538CF85)
 
 ## What do I need to have before I start?
 To run the project, you need:
@@ -30,7 +30,7 @@ To run the project, you need:
 - Node.js 16 to run Ganache-cli
 - `brownie-eth` 1.19 installed. Guide [here](https://eth-brownie.readthedocs.io/en/stable/install.html)
 - `ganache-cli` 6.12 installed. And yes, don't use the newer `ganache` package since it has incompatibilities with brownie
-- Scroll network setup in your Brownie `network-config.yaml` file. Here's a short guide [here](https://github.com/pajicf/scroll-multisig-and-nft/assets/network_config_guide.md)
+- Scroll network setup in your Brownie `network-config.yaml` file. Here's a short guide [here](https://github.com/pajicf/scroll-multisig-and-nft/blob/main/assets/network_config_guide.MD)
 - Good will 🙂
 
 ## How do I run this project?
@@ -38,7 +38,7 @@ To run the project, you need:
 2. `cd scroll-multisig-and-nft`  
 3. `brownie test` - To run the tests
 4. `brownie compile` - To compile and build the smart contracts
-5. `brownie run ./scripts/deploy.py --network scroll-main` - To deploy the contracts  
+5. `brownie run ./scripts/deploy.py --network scroll-alpha` - To deploy the contracts  
 _!In the next steps don't forget to replace values with your own!_
-6. `brownie run ./scripts/transfer_ownership.py [NFT_ADDRESS] [MULTISIG_ADDRESS] --network scroll-main` - To transfer NFT ownership to the multisig
-7. `brownie run ./scripts/multisig_script.py [NFT_ADDRESS] [MULTISIG_ADDRESS] --network scroll-main` - To mint the NFT through the multisig
+6. `brownie run ./scripts/transfer_ownership.py main [NFT_ADDRESS] [MULTISIG_ADDRESS] --network scroll-alpha` - To transfer NFT ownership to the multisig
+7. `brownie run ./scripts/multisig_script.py main [NFT_ADDRESS] [MULTISIG_ADDRESS] --network scroll-alpha` - To mint the NFT through the multisig

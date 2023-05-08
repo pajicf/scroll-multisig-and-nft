@@ -1,6 +1,6 @@
-# use Ganache's forked mainnet mode as the default network
+# use Ganache's forked Alpha testnet mode as the default network
 networks:
-  default: scroll-main-fork
+  default: scroll-alpha-fork
 
 autofetch_sources: true
 

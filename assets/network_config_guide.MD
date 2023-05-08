@@ -5,29 +5,29 @@
 
 - Add under `live`
 ```
-- name: Scroll
-  networks:
-  - name: Mainnet
-    chainid: 534354
-    id: scroll-main
-    host: https://prealpha.scroll.io/l2
-    explorer: https://l2scan.scroll.io/
+  - name: Scroll
+    networks:
+    - name: Scroll Alpha Testnet
+      chainid: 534353
+      id: scroll-alpha
+      host: https://alpha-rpc.scroll.io/l2
+      explorer: https://blockscout.scroll.io/
 ```
 
 - Add under `development`
 ```
-  - name: Ganache-CLI (Scroll-Mainnet Fork)
-  id: scroll-main-fork
-  cmd: ganache-cli
-  host: http://127.0.0.1
-  timeout: 120
-  cmd_settings:
-    port: 8545
-    gas_limit: 20000000
-    accounts: 10
-    evm_version: istanbul
-    mnemonic: brownie
-    fork: scroll-main
+  - name: Ganache-CLI (Scroll-Alpha-Testnet Fork)
+    id: scroll-alpha-fork
+    cmd: ganache-cli
+    host: http://127.0.0.1
+    timeout: 120
+    cmd_settings:
+      port: 8545
+      gas_limit: 20000000
+      accounts: 10
+      evm_version: istanbul
+      mnemonic: brownie
+      fork: scroll-alpha
 ```
 
 - That's it!
@@ -170,7 +170,7 @@ live:
         explorer: https://api-moonbeam.moonscan.io/api
         multicall2: "0x1337BedC9D22ecbe766dF105c9623922A27963EC"
       - name: Moonbase Alpha
-        chainid: 1287
+        chainid: 1287 
         id: moonbeam-test
         host: https://moonbeam-alpha.api.onfinality.io/public
         explorer: https://api-moonbase.moonscan.io/api
@@ -225,11 +225,11 @@ live:
         explorer: https://blockscout.com/poa/sokol/api
   - name: Scroll
     networks:
-      - name: Mainnet
-        chainid: 534354
-        id: scroll-main
-        host: https://prealpha.scroll.io/l2
-        explorer: https://l2scan.scroll.io/
+    - name: Scroll Alpha Testnet
+      chainid: 534353
+      id: scroll-alpha
+      host: https://alpha-rpc.scroll.io/l2
+      explorer: https://blockscout.scroll.io/
 
 development:
   - name: Anvil
@@ -359,8 +359,8 @@ development:
       evm_version: istanbul
       mnemonic: brownie
       fork: aurora-main
-  - name: Ganache-CLI (Scroll-Mainnet Fork)
-    id: scroll-main-fork
+  - name: Ganache-CLI (Scroll-Alpha-Testnet Fork)
+    id: scroll-alpha-fork
     cmd: ganache-cli
     host: http://127.0.0.1
     timeout: 120
@@ -370,6 +370,6 @@ development:
       accounts: 10
       evm_version: istanbul
       mnemonic: brownie
-      fork: scroll-main
+      fork: scroll-alpha
 ```
 
